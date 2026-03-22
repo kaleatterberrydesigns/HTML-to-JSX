@@ -25,7 +25,11 @@
         // Same card UI, written as a JSX component (HTML-like syntax inside JavaScript)
         // This component is reusable - we can create multiple cards by passing different data
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         function PricingCard({ title, price, pricePeriod, includesText, features, buttonText, buttonVariant }) {
+=======
+        function PricingCard({ title, price, priceperiod, includesText, features, buttonText, buttonVariant }) {
+>>>>>>> Stashed changes
 =======
         function PricingCard({ title, price, priceperiod, includesText, features, buttonText, buttonVariant }) {
 >>>>>>> Stashed changes
@@ -35,9 +39,15 @@
                     {/* Curly braces { } let you insert JavaScript expressions into JSX */}
                     <h1 className="card-title">{title}</h1>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     <p className="card-price">
                         <span className="card-price-amount">{price}</span>
                         {pricePeriod ? <span className="card-price-period">{pricePeriod}</span> : null}
+=======
+                    <p className="card-price">{price}
+                        <span className="card-price-amount">{priceAmount}</span>
+                        <span className="card-price-period">{pricePeriod}</span>
+>>>>>>> Stashed changes
 =======
                     <p className="card-price">{price}
                         <span className="card-price-amount">{priceAmount}</span>
