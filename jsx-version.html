@@ -24,7 +24,7 @@
 
         // Same card UI, written as a JSX component (HTML-like syntax inside JavaScript)
         // This component is reusable - we can create multiple cards by passing different data
-        function PricingCard({ title, price, includesText, features, buttonText, buttonVariant }) {
+        function PricingCard({ title, price, pricePeriod, includesText, features, buttonText, buttonVariant }) {
             return (
                 // JSX uses "className" instead of "class" because "class" is a reserved word in JavaScript
                 <div className="card">
@@ -32,9 +32,8 @@
                     <h1 className="card-title">{title}</h1>
                     <p className="card-price">
                         <span className="card-price-amount">{price}</span>
-                        <span className="card-price-period">{pricePeriod}</span>
+                        {pricePeriod ? <span className="card-price-period">{pricePeriod}</span> : null}
                     </p>
-
                     <div className="card-content">
                         <p className="includes-text">{includesText}</p>
                         <ul className="features-list">
