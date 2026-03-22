@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — HTML version</title>
+    <!-- Link — warms up connection to Google Fonts (faster font load) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Link — loads font files; crossorigin required for Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link — Inter weights 400–700 used across the page -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link — project styles (layout, colors, type, components) -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Block — dev badge: fixed label, not part of the pricing UI -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+    <!-- Block — horizontal row of pricing cards; spacing between cards lives in CSS -->
     <div class="cards-container">
+        <!-- Card — Hobby tier: title, price, feature list, CTA -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
@@ -38,6 +45,7 @@
             </div>
             <button class="download-button secondary">Download</button>
         </div>
+        <!-- Card — Pro tier: same structure; primary button style for emphasis -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>

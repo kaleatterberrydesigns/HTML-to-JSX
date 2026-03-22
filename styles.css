@@ -1,9 +1,11 @@
+/* Reset — removes default margins; box-sizing makes padding predictable */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Page canvas — warm gray background; content centered vertically */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +16,7 @@ body {
     padding: 20px;
 }
 
+/* Card row — side-by-side layout; 24px gap between cards */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +26,7 @@ body {
     align-items: flex-start;
 }
 
+/* Card shell — fixed width, rounded corners, inner padding; stacks title → list → button */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +38,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Card upper block — title, price, and features (button sits below in markup) */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name — largest text on the card; dark neutral */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +53,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price line — wraps amount + period; muted color for hierarchy */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +61,38 @@ body {
     align-items: baseline;
 }
 
+/* Dollar amount or “Free” — slightly larger than supporting price text */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* “/mo.” etc. — smaller, same muted tone as amount */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Features region — space before the CTA button */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* “Includes:” label — intro copy above the bullet list */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list — no bullets; spacing handled per row */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* One feature row — checkmark + text aligned on one line */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +101,7 @@ body {
     color: #26251e;
 }
 
+/* Check glyph — visual accent before each feature string */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +109,7 @@ body {
     font-weight: 400;
 }
 
+/* CTA base — pill shape, neutral fill; sits at bottom of flex card */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -109,14 +124,17 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* CTA hover — slightly darker neutral */
 .download-button:hover {
     background-color: #D8D6CE;
 }
 
+/* CTA pressed — matches hover for a flat press state */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
+/* CTA primary — dark fill for the recommended / paid plan */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -129,20 +147,25 @@ body {
 .download-button.primary:active {
     background-color: #333;
 }
+
+/* CTA outline — optional variant: border only (not used in current HTML) */
 .download-button.outline {
     background-color: transparent;
     border: 1px solid #111;
     color: #111;
 }
+
 .download-button.outline:hover {
     background-color: #111;
     color: #fff;
 }
+
 .download-button.outline:active {
     background-color: #111;
     color: #fff;
 }
 
+/* Dev label — fixed top center; white chip over the page */
 .page-label {
     position: fixed;
     top: 16px;
@@ -156,6 +179,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Emphasis inside the label — darker text for “HTML version” */
 .page-label strong {
     color: #333;
 }
